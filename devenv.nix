@@ -1,7 +1,7 @@
 { pkgs, lib, config, inputs, ... }:
 
 {
-  packages = [ pkgs.git ];
+  packages = with pkgs; [ git basedpyright pre-commit ruff ];
 
   languages.python = {
     enable = true;
